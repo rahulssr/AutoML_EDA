@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 from streamlit_pandas_profiling import st_profile_report
 from sklearn.model_selection import train_test_split
-from pandas_profiling import ProfileReport
+# from pandas_profiling import ProfileReport
 from sklearn.preprocessing import StandardScaler,MinMaxScaler
 from sklearn.decomposition import PCA
 import plotly.express as px
@@ -35,7 +35,7 @@ df = []
 dataset = st.sidebar.file_uploader("upload file here", type = ['csv'])
 if dataset is not None:
     df = pd.read_csv(dataset) 
-    pr = ProfileReport(df)  
+    # pr = ProfileReport(df)  
     col = df.columns.values
 st.sidebar.write("try with this dataset")
 st.sidebar.write("https://github.com/sahilmerai/ml_basic/blob/3ffaaae1847a86f3bd526a5d070155949094bda7/dd.csv") 
