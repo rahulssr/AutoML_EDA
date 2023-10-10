@@ -59,7 +59,14 @@ if EDA:
 st.sidebar.subheader("select target variable")
 target_variable = st.sidebar.selectbox('select target variable',(col))
 # define variable
-X = df.drop(target_variable,axis=1)
+try:
+    X = df.drop(target_variable, axis=1)
+except KeyError as e:
+    print(f"Error: Column '{target_variable}' not found in DataFrame.")
+except Exception as e:
+    print(f"An error occurred: {str(e)}")
+
+# X = df.drop(target_variable,axis=1)
 y = df[target_variable]
 
 # train test split part
