@@ -1,4 +1,4 @@
-streamlit 
+streamlit
 pandas==1.4.2
 numpy==1.22.3
 scikit-learn==0.24.2
@@ -6,5 +6,5 @@ seaborn
 matplotlib
 mlxtend
 plotly==5.7.0
-Pandas-Profiling
-streamlit-pandas-profiling
+pandas-profiling==2.11.0  # Specify the version that works
+streamlit-pandas-profiling==0.1.3
